@@ -55,6 +55,7 @@ padding-right: 15px;
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
+    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-nav{
     display: flex;
@@ -112,7 +113,9 @@ font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.02em;
 color: #434455;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .address-link:hover,
 .address-link:focus{
@@ -127,6 +130,10 @@ color: #434455;
 .address-link {
     text-decoration: none;
     font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0,02em;
 }
 .hero-section{
     padding-top: 188px;
@@ -141,8 +148,55 @@ color: #434455;
      background-size: cover;
      max-width: 1140;
      margin: 0 auto;
+     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.decor {
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu{
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.menu-after{
+    position: relative;
+    color: #404bbf;
+}
+.menu-link {
+    color: #404bbf;
+    position: relative;
+    display: block;
+    color: #2E2F42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+}
+.link.menu-link.menu-after::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -1px;
+    margin-top: 20px;
+    color: #404bbf;
+    background-color: rgb(64, 75, 191);
+}
+
+.link.menu-link.menu-after {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #404bbf;
+}
 .main-title{
     font-family: 'Roboto', sans-serif;
     font-size: 56px;
