@@ -49,13 +49,13 @@ padding-right: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 72px;
 }
 .page-header{
     border-bottom: 1px solid #e7e9fc;
     padding-top: 24px;
     padding-bottom: 24px;
-    display: flex;
-    box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-nav{
     display: flex;
@@ -83,52 +83,37 @@ padding-right: 15px;
     text-decoration: none;
     margin-right: 76px;
     }
-.menu{
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-}
-.menu-link{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing:0.02em;
-    padding: 24px 0;
-    color: #2E2F42;
-}
-.menu-link:hover,
-.menu-link:focus{
-    color: #404bbf;
-}
-.decor {
-    color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .menu{
     display: flex;
     align-items: flex-start;
     gap: 40px;
 }
-
 .menu-after{
     position: relative;
     color: #404bbf;
 }
 .menu-link {
-    color: #404bbf;
-    position: relative;
-    display: block;
-    color: #2E2F42;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 24px;
     letter-spacing: 0.02em;
     padding: 24px 0;
+    position: relative;
+    display: block;
+    color: #2E2F42;    
 }
-.link.menu-link.menu-after::after {
-    content: '';
+.menu-link:hover,
+.menu-link:focus{
+    color: #404bbf;
+}
+.menu-link .link .menu-after{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #404bbf;
+}
+.menu-link .link .menu-after::after{
+    content:'';
     position: absolute;
     display: block;
     width: 48px;
@@ -139,13 +124,10 @@ padding-right: 15px;
     bottom: -1px;
     margin-top: 20px;
     color: #404bbf;
-    background-color: rgb(64, 75, 191);
+    background-color: rgba(64, 75, 191);
+
 }
 
-.link.menu-link.menu-after {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: #404bbf;
-}
 .address-list{
     display: flex;
     gap: 40px;
@@ -232,6 +214,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     border-radius: 4px;
     color: #ffffff;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-name:hover,
@@ -346,6 +329,9 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-item{
     background: #ffffff;
@@ -517,8 +503,8 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
     height: 100%;
     list-style-type: none; 
 }
-.social-list-item-footer .social-link-footer:hover,
-.social-list-item-footer .social-link-footer:focus{
+.social-list-item-footer .social-list-link-footer:hover,
+.social-list-item-footer .social-list-link-footer:focus{
     background-color: #31d0aa;
 }
 .social-list-link-footer {
